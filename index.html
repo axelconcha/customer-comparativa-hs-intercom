@@ -118,17 +118,19 @@ header {
 .comp-table tbody tr { border-bottom: 1px solid #F3F4F6; transition: background 0.1s; }
 .comp-table tbody tr:last-child { border-bottom: none; }
 .comp-table tbody tr:hover { background: #FDFCFF; }
-.comp-table td { padding: 14px 16px; vertical-align: top; font-size: 15px; color: var(--mid); }
-.feat-name { font-weight: 600; color: var(--dark); font-size: 15px; line-height: 1.4; }
-.win-cell { text-align: center; vertical-align: middle; }
+.comp-table td { padding: 16px 16px; vertical-align: middle; font-size: 14px; color: var(--mid); }
+.feat-name { font-weight: 700; color: var(--dark); font-size: 14px; line-height: 1.4; }
+.win-cell { text-align: center; vertical-align: middle; padding: 16px 12px; }
 .badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 8px; border-radius: 20px; white-space: nowrap; }
 .badge-hs { background: #FFF1EE; color: var(--hs-color); }
 .badge-ic { background: #EEF0FF; color: var(--ic-color); }
-.badge-tie { background: #FEF3C7; color: #92400E; }
-.check { color: var(--win-green); font-size: 15px; }
-.cross { color: var(--red); font-size: 15px; }
-.neutral { color: var(--warn); font-size: 15px; }
-.cell-icon { margin-right: 5px; }
+.badge-tie { background: #F3EAFB; color: var(--purple); }
+/* New cell layout */
+.cell-icon { display: block; text-align: center; font-size: 22px; margin-bottom: 7px; line-height: 1; }
+.cell-text { display: block; text-align: center; font-size: 13px; color: var(--muted); line-height: 1.5; }
+.check { color: var(--win-green); }
+.cross { color: var(--red); }
+.neutral { color: var(--warn); }
 tr.hs-win td:nth-child(2) { background: rgba(255,122,89,0.04); }
 tr.ic-win td:nth-child(3) { background: rgba(108,99,255,0.04); }
 
@@ -205,7 +207,6 @@ footer {
   <span class="sep">vs</span>
   <div class="meta-pill"><div class="dot" style="background:var(--ic-color)"></div>Intercom</div>
   <span class="sep">·</span>
-  <div class="meta-pill">📋 6 áreas evaluadas</div>
   <div class="meta-pill">💡 Insights y propuestas</div>
 </div>
 
@@ -221,7 +222,7 @@ footer {
     <div class="platform-icon ic-icon">🟣</div>
     <div>
       <h3>Intercom</h3>
-      <p>Te muestra quiénes están usando tu producto o web y te facilita la comunicación personal con ellos a través de contenido específico, correo electrónico orientado al comportamiento, mensajes in-app y mensajes web.</p>
+      <p>Te muestra quiénes están usando tu producto o web y te facilita la comunicación personal con ellos a través de contenido específico, correo electrónico orientado al comportamiento, mensajes in-app y mensajes web. <em style="font-size:12px;color:var(--light)">Fuente: intercom.com</em></p>
     </div>
   </div>
 </div>
@@ -232,14 +233,51 @@ footer {
   <table class="comp-table">
     <thead><tr><th class="th-feat">Característica</th><th class="th-hs">🟠 HubSpot</th><th class="th-ic">🟣 Intercom</th><th class="th-win">Ventaja</th></tr></thead>
     <tbody>
-      <tr class="hs-win"><td><div class="feat-name">Panel de CS / Workspace</div></td><td><span class="check cell-icon">✓</span>Workspace en Pro/Enterprise. Centraliza health scores, tareas y análisis de sentimiento.</td><td><span class="cross cell-icon">✗</span>Sin panel dedicado de CS. Métricas de éxito mediante integraciones de terceros.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr class="hs-win"><td><div class="feat-name">NPS / CSAT / CES</div></td><td><span class="check cell-icon">✓</span>Encuestas completas con automatización de acciones y workflows integrados.</td><td><span class="neutral cell-icon">~</span>Encuestas dentro del módulo de soporte proactivo, sin panel dedicado.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr class="hs-win"><td><div class="feat-name">Health Score</div></td><td><span class="check cell-icon">✓</span>Puntuaciones basadas en uso y engagement. Visualizadas en el workspace de CS.</td><td><span class="cross cell-icon">✗</span>Sin health score nativo. Requiere herramienta externa.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr class="hs-win"><td><div class="feat-name">Alertas de riesgo (churn)</div></td><td><span class="check cell-icon">✓</span>Alerts automáticas cuando baja la puntuación de salud o el uso del producto.</td><td><span class="cross cell-icon">✗</span>Sin alertas nativas. Requiere integraciones externas.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr class="hs-win"><td><div class="feat-name">Vista 360° / CRM nativo</div></td><td><span class="check cell-icon">✓</span>Vista unificada con integración nativa de CRM, marketing y ventas.</td><td><span class="neutral cell-icon">~</span>Se integra con Salesforce y Pipedrive. No es CRM nativo.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr class="hs-win"><td><div class="feat-name">IA predictiva</div></td><td><span class="check cell-icon">✓</span>Breeze AI con puntuaciones predictivas y acciones automatizadas.</td><td><span class="cross cell-icon">✗</span>Sin módulo predictivo de éxito. IA focalizada en soporte conversacional.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr><td><div class="feat-name">WhatsApp y omnicanalidad</div></td><td><span class="check cell-icon">✓</span>Bandeja omnicanal nativa con email, WhatsApp y chatbot integrados directamente en Service Hub.</td><td><span class="check cell-icon">✓</span>Bandeja omnicanal nativa con email, SMS y WhatsApp. Además traduce a 45 idiomas automáticamente.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
+<tbody>
+      <tr class="hs-win">
+        <td><div class="feat-name">Panel de CS / Workspace</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Workspace dedicado en Pro/Enterprise. Centraliza health scores, tareas y sentimiento en un solo panel.</span></td>
+        <td><span class="cell-icon cross">✗</span><span class="cell-text">No tiene panel de CS nativo. Requiere integraciones externas para medir métricas de éxito.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
+      <tr class="hs-win">
+        <td><div class="feat-name">NPS / CSAT / CES</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Encuestas nativas con automatización de acciones y workflows integrados al CRM.</span></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Encuestas disponibles en módulo de soporte proactivo, sin panel de resultados dedicado.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
+      <tr class="hs-win">
+        <td><div class="feat-name">Health Score</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Puntuaciones de salud basadas en uso y engagement, visualizadas en el workspace de CS.</span></td>
+        <td><span class="cell-icon cross">✗</span><span class="cell-text">Sin health score nativo. Es necesario integrar una herramienta externa.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
+      <tr class="hs-win">
+        <td><div class="feat-name">Alertas de riesgo (churn)</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Workflows automáticos que alertan cuando baja la puntuación de salud o el uso del producto.</span></td>
+        <td><span class="cell-icon cross">✗</span><span class="cell-text">Sin alertas nativas. Requiere configuración con integraciones externas.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
+      <tr class="hs-win">
+        <td><div class="feat-name">Vista 360° / CRM nativo</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Vista unificada del cliente con integración nativa de CRM, marketing y ventas.</span></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Se integra con Salesforce y Pipedrive pero no es un CRM nativo.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
+      <tr class="hs-win">
+        <td><div class="feat-name">IA predictiva</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Breeze AI ofrece puntuaciones predictivas y acciones automatizadas según comportamiento.</span></td>
+        <td><span class="cell-icon cross">✗</span><span class="cell-text">Sin módulo predictivo de éxito. Su IA se centra exclusivamente en soporte conversacional.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">WhatsApp y omnicanalidad</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Bandeja omnicanal nativa con email, WhatsApp y chatbot integrados en Service Hub.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Bandeja omnicanal nativa con email, SMS y WhatsApp. Traducción automática a 45 idiomas incluida.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
     </tbody>
+
   </table>
 </div>
 
@@ -249,14 +287,57 @@ footer {
   <table class="comp-table">
     <thead><tr><th class="th-feat">Característica</th><th class="th-hs">🟠 HubSpot</th><th class="th-ic">🟣 Intercom</th><th class="th-win">Ventaja</th></tr></thead>
     <tbody>
-      <tr><td><div class="feat-name">Help desk unificado</div></td><td><span class="check cell-icon">✓</span>Tickets de correo, chat y llamadas. Múltiples pipelines e historial completo.</td><td><span class="check cell-icon">✓</span>Inbox compartido con chat, correo, SMS/WhatsApp y llamadas. Mejor omnicanalidad.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
-      <tr><td><div class="feat-name">SLAs y automatización</div></td><td><span class="neutral cell-icon">~</span>SLAs, escalaciones y workflows integrados con CRM desde Professional.</td><td><span class="neutral cell-icon">~</span>Workflows Builder en Advanced/Expert. SLAs formales solo en Expert.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
-      <tr><td><div class="feat-name">Base de conocimientos</div></td><td><span class="neutral cell-icon">~</span>KB con IA, personalizable. Multilingüe solo en Enterprise.</td><td><span class="neutral cell-icon">~</span>Help center multimarcas y multilingüe. Integrado nativamente con Fin AI.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
-      <tr><td><div class="feat-name">Omnicanalidad + traducción</div></td><td><span class="check cell-icon">✓</span>Email, WhatsApp, chat en vivo y llamadas de forma nativa en inbox unificado.</td><td><span class="check cell-icon">✓</span>Email, WhatsApp, SMS, llamadas, videollamadas. Traducción automática a 45 idiomas.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
-      <tr><td><div class="feat-name">Bot sin IA (flujos y reglas)</div></td><td><span class="check cell-icon">✓</span>Chatflows con respuestas predeterminadas, enrutamiento y lógica condicional. Sin costo adicional.</td><td><span class="check cell-icon">✓</span>Bots personalizados con constructor visual y flujos condicionales. Incluido en todos los planes.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
-      <tr><td><div class="feat-name">Bot con IA (Customer Agent / Fin)</div></td><td><span class="neutral cell-icon">~</span>Customer Agent disponible en Professional/Enterprise. US$ 0,50/conv extra. Nuestro plan incluye 50.000 créditos = 500 conv IA/mes (ya pagadas: US$ 235/mes en créditos).</td><td><span class="neutral cell-icon">~</span>Fin AI Agent: 60–86% de resolución. Cobra US$ 0,99/resolución. Los costos escalan con el volumen de tickets.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr><td><div class="feat-name">Reportes y dashboards</div></td><td><span class="neutral cell-icon">~</span>Dashboards personalizables integrados con CRM. Productividad y satisfacción.</td><td><span class="neutral cell-icon">~</span>Reportes personalizados solo en Advanced/Expert.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
+<tbody>
+      <tr>
+        <td><div class="feat-name">Help desk unificado</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Tickets de correo, chat y llamadas en un workspace. Múltiples pipelines e historial completo.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Inbox compartido con chat, correo, SMS/WhatsApp y llamadas. Macros y vistas avanzadas.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">SLAs</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">SLAs con escalaciones desde el plan Professional. Integrados al CRM.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">SLAs disponibles desde el plan Expert.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">Automatización de tickets</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Workflows automatizan asignación, cambios de estado, tareas y encuestas. Integrados con todo el CRM.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Workflows Builder disponible desde Advanced. Potente para flujos conversacionales.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">Base de conocimientos</div></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">KB con asistencia de IA, personalizable. Multilingüe solo en Enterprise.</span></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Help center multimarcas y multilingüe desde Advanced. Integrado con Fin AI.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">Omnicanalidad + traducción</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Email, WhatsApp, chat y llamadas en inbox unificado nativo.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Email, WhatsApp, SMS, llamadas, videollamadas. Traducción automática a 45 idiomas.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">Bot sin IA (flujos y reglas)</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Chatflows con respuestas predeterminadas, enrutamiento y lógica condicional. Sin costo extra.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Constructor visual de bots con flujos condicionales. Incluido en todos los planes.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">Bot con IA (Customer Agent / Fin)</div></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Customer Agent en Pro/Enterprise. US$ 0,50/conv. Plan incluye 500 conv IA/mes.</span></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Fin AI: 60–86% de resolución. US$ 0,99/resolución. Costo escala con el volumen.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
+      <tr class="hs-win">
+        <td><div class="feat-name">Reportes y dashboards</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Dashboards personalizables con datos de CRM, tickets, productividad y satisfacción en todos los planes.</span></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Reportes básicos en Essential. Reportes personalizados y en tiempo real solo desde Advanced.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
     </tbody>
+
   </table>
 </div>
 
@@ -266,13 +347,45 @@ footer {
   <table class="comp-table">
     <thead><tr><th class="th-feat">Característica</th><th class="th-hs">🟠 HubSpot</th><th class="th-ic">🟣 Intercom</th><th class="th-win">Ventaja</th></tr></thead>
     <tbody>
-      <tr class="ic-win"><td><div class="feat-name">Product Tours</div></td><td><span class="cross cell-icon">✗</span>No disponibles en Service Hub. Requiere herramientas de terceros.</td><td><span class="check cell-icon">✓</span>Add-on Proactive Support incluye tours guiados paso a paso.</td><td class="win-cell"><span class="badge badge-ic">Intercom</span></td></tr>
-      <tr class="ic-win"><td><div class="feat-name">Checklists personalizadas</div></td><td><span class="cross cell-icon">✗</span>Sin checklists nativas. Pueden simularse con tareas.</td><td><span class="check cell-icon">✓</span>Checklists para configuración guiada del usuario.</td><td class="win-cell"><span class="badge badge-ic">Intercom</span></td></tr>
-      <tr class="ic-win"><td><div class="feat-name">Tooltips y mensajes in-app</div></td><td><span class="cross cell-icon">✗</span>Sin tooltips ni banners interactivos en Service Hub.</td><td><span class="check cell-icon">✓</span>Tooltips, banners y mensajes in-app para guiar o anunciar cambios.</td><td class="win-cell"><span class="badge badge-ic">Intercom</span></td></tr>
-      <tr class="ic-win"><td><div class="feat-name">Carouseles móviles y Push</div></td><td><span class="cross cell-icon">✗</span>No disponibles.</td><td><span class="check cell-icon">✓</span>Carouseles móviles y push notifications en Proactive Support.</td><td class="win-cell"><span class="badge badge-ic">Intercom</span></td></tr>
-      <tr class="ic-win"><td><div class="feat-name">Series de onboarding</div></td><td><span class="neutral cell-icon">~</span>Workflows de correo y tareas, sin constructor in-app específico.</td><td><span class="check cell-icon">✓</span>Series Builder: tours, mensajes, correos y bots. Segmentación por comportamiento.</td><td class="win-cell"><span class="badge badge-ic">Intercom</span></td></tr>
-      <tr class="ic-win"><td><div class="feat-name">Pruebas A/B</div></td><td><span class="cross cell-icon">✗</span>Sin pruebas A/B para onboarding.</td><td><span class="check cell-icon">✓</span>Pruebas A/B disponibles en add-on Proactive Support.</td><td class="win-cell"><span class="badge badge-ic">Intercom</span></td></tr>
+<tbody>
+      <tr class="ic-win">
+        <td><div class="feat-name">Product Tours</div></td>
+        <td><span class="cell-icon cross">✗</span><span class="cell-text">No disponibles en Service Hub. Requiere herramienta externa.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Disponibles en add-on Proactive Support. Guías interactivas paso a paso en el producto.</span></td>
+        <td class="win-cell"><span class="badge badge-ic">Intercom</span></td>
+      </tr>
+      <tr class="ic-win">
+        <td><div class="feat-name">Checklists personalizadas</div></td>
+        <td><span class="cell-icon cross">✗</span><span class="cell-text">Sin checklists nativas. Pueden simularse con tareas del CRM.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Checklists de configuración guiada para activar a nuevos usuarios.</span></td>
+        <td class="win-cell"><span class="badge badge-ic">Intercom</span></td>
+      </tr>
+      <tr class="ic-win">
+        <td><div class="feat-name">Tooltips y mensajes in-app</div></td>
+        <td><span class="cell-icon cross">✗</span><span class="cell-text">Sin tooltips ni banners interactivos en Service Hub.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Tooltips, banners y mensajes in-app para guiar o anunciar cambios dentro del producto.</span></td>
+        <td class="win-cell"><span class="badge badge-ic">Intercom</span></td>
+      </tr>
+      <tr class="ic-win">
+        <td><div class="feat-name">Carouseles móviles y Push</div></td>
+        <td><span class="cell-icon cross">✗</span><span class="cell-text">No disponibles.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Carouseles y push notifications en Proactive Support. Ideal para activación en mobile.</span></td>
+        <td class="win-cell"><span class="badge badge-ic">Intercom</span></td>
+      </tr>
+      <tr class="ic-win">
+        <td><div class="feat-name">Series de onboarding</div></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Workflows de correo y tareas. Sin constructor de campañas in-app específico.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Series Builder: tours, mensajes, correos y bots con segmentación por comportamiento.</span></td>
+        <td class="win-cell"><span class="badge badge-ic">Intercom</span></td>
+      </tr>
+      <tr class="ic-win">
+        <td><div class="feat-name">Pruebas A/B</div></td>
+        <td><span class="cell-icon cross">✗</span><span class="cell-text">Sin pruebas A/B para onboarding.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Pruebas A/B disponibles en add-on Proactive Support.</span></td>
+        <td class="win-cell"><span class="badge badge-ic">Intercom</span></td>
+      </tr>
     </tbody>
+
   </table>
 </div>
 
@@ -282,11 +395,33 @@ footer {
   <table class="comp-table">
     <thead><tr><th class="th-feat">Característica</th><th class="th-hs">🟠 HubSpot</th><th class="th-ic">🟣 Intercom</th><th class="th-win">Ventaja</th></tr></thead>
     <tbody>
-      <tr><td><div class="feat-name">Experiencia de chat</div></td><td><span class="neutral cell-icon">~</span>Widget personalizable. Identifica usuarios en Pro/Enterprise vía API.</td><td><span class="neutral cell-icon">~</span>Messenger en web y apps. Archivos, emojis, video y llamadas. Conversaciones continuas.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
-      <tr><td><div class="feat-name">Bot IA para clientes</div></td><td><span class="neutral cell-icon">~</span>Customer Agent en Professional. US$ 0,50/conv extra sobre las 500 incluidas en nuestro plan. Créditos: 47.000 + 3.000 = 50.000/mes.</td><td><span class="neutral cell-icon">~</span>Fin AI: 60–86% resolución. Costo: US$ 0,99/resolución. Los costos escalan con el volumen.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr><td><div class="feat-name">Asistente IA para agentes</div></td><td><span class="neutral cell-icon">~</span>Breeze AI incluido en el inbox sin costo adicional por asiento.</td><td><span class="neutral cell-icon">~</span>Copilot: add-on de US$ 35/usuario/mes. Sugiere respuestas y resume contexto.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
-      <tr><td><div class="feat-name">Constructor de flujos de bots</div></td><td><span class="check cell-icon">✓</span>Chatflows con respuestas predeterminadas y lógica condicional integrada con CRM.</td><td><span class="check cell-icon">✓</span>Bots con flujos condicionales y constructor visual avanzado. Enlazable con Fin AI.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
+<tbody>
+      <tr class="ic-win">
+        <td><div class="feat-name">Experiencia de chat</div></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Widget personalizable con soporte de archivos adjuntos. Sin llamadas ni continuidad entre canales.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Messenger nativo en web y apps móviles con archivos, emojis, video, llamadas y conversaciones continuas entre canales.</span></td>
+        <td class="win-cell"><span class="badge badge-ic">Intercom</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">Bot IA para clientes</div></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Customer Agent en Pro/Enterprise. US$ 0,50/conv extra sobre las 500 incluidas en nuestro plan.</span></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Fin AI: 60–86% de resolución. US$ 0,99 por resolución. Los costos escalan con el volumen.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
+      <tr class="hs-win">
+        <td><div class="feat-name">Asistente IA para agentes</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Breeze AI incluido en el plan. Sugiere respuestas directamente en el inbox sin costo extra.</span></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Copilot disponible como add-on a US$ 35/usuario/mes. No está incluido en ningún plan base.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">Constructor de flujos de bots</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Chatflows con lógica condicional integrada con CRM y workflows.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Constructor visual avanzado con flujos condicionales. Puede enlazarse con Fin AI.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
     </tbody>
+
   </table>
 </div>
 
@@ -296,12 +431,39 @@ footer {
   <table class="comp-table">
     <thead><tr><th class="th-feat">Característica</th><th class="th-hs">🟠 HubSpot</th><th class="th-ic">🟣 Intercom</th><th class="th-win">Ventaja</th></tr></thead>
     <tbody>
-      <tr class="hs-win"><td><div class="feat-name">Seguimiento de eventos</div></td><td><span class="check cell-icon">✓</span>Custom Events hasta 30M/mes. Unifica datos en CRM para workflows y reportes.</td><td><span class="neutral cell-icon">~</span>trackEvent via JS/API. Segmentación de mensajes pero sin integración CRM nativa.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr class="hs-win"><td><div class="feat-name">API y datos CRM</div></td><td><span class="check cell-icon">✓</span>API completa para contactos, deals, tickets. Webhooks y OAuth integrados.</td><td><span class="neutral cell-icon">~</span>Integra Salesforce, Slack, Stripe. No es CRM nativo.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr class="hs-win"><td><div class="feat-name">Journey Analytics</div></td><td><span class="check cell-icon">✓</span>Custom Events, Journey Analytics y Data Hub para análisis por ciclo de vida.</td><td><span class="cross cell-icon">✗</span>Sin análisis de ciclo de vida. Solo eventos y reportes de soporte.</td><td class="win-cell"><span class="badge badge-hs">HubSpot</span></td></tr>
-      <tr><td><div class="feat-name">Automatizaciones (Zapier/n8n)</div></td><td><span class="check cell-icon">✓</span>Workflows internos + conexión con Zapier, n8n y otros iPaaS.</td><td><span class="check cell-icon">✓</span>Integraciones con Zapier e iPaaS. Workflows Builder en planes avanzados.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
-      <tr><td><div class="feat-name">Webinars y capacitaciones</div></td><td><span class="neutral cell-icon">~</span>Integra Calendly y Zoom vía Marketing Hub para reuniones y webinars.</td><td><span class="neutral cell-icon">~</span>Sin calendario nativo. Integra Calendly y Google Calendar.</td><td class="win-cell"><span class="badge badge-tie">Empate</span></td></tr>
+<tbody>
+      <tr class="hs-win">
+        <td><div class="feat-name">Seguimiento de eventos</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Custom Events hasta 30M/mes. Unifica datos en CRM para workflows y reportes.</span></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">trackEvent vía JS/API. Segmentación de mensajes pero sin integración CRM nativa.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
+      <tr class="hs-win">
+        <td><div class="feat-name">API y datos CRM</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">API completa para contactos, deals y tickets. Webhooks y OAuth integrados.</span></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Integra Salesforce, Slack y Stripe. No es CRM nativo.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
+      <tr class="hs-win">
+        <td><div class="feat-name">Journey Analytics</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Journey Analytics y Data Hub para análisis de ciclo de vida completo.</span></td>
+        <td><span class="cell-icon cross">✗</span><span class="cell-text">Sin análisis de ciclo de vida. Solo eventos y reportes de soporte.</span></td>
+        <td class="win-cell"><span class="badge badge-hs">HubSpot</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">Automatizaciones (Zapier/n8n)</div></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Workflows internos + Zapier, n8n y otros iPaaS.</span></td>
+        <td><span class="cell-icon check">✓</span><span class="cell-text">Integraciones con Zapier e iPaaS. Workflows Builder en planes avanzados.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
+      <tr>
+        <td><div class="feat-name">Webinars y capacitaciones</div></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Integra Calendly y Zoom vía Marketing Hub.</span></td>
+        <td><span class="cell-icon neutral">~</span><span class="cell-text">Sin calendario nativo. Integra Calendly y Google Calendar.</span></td>
+        <td class="win-cell"><span class="badge badge-tie">Empate</span></td>
+      </tr>
     </tbody>
+
   </table>
 </div>
 
@@ -311,9 +473,9 @@ footer {
   <div class="insights-grid">
     <div class="insight-card hs"><h4>HubSpot lidera en Customer Success y CRM</h4><p>El workspace de CS, health scores, vista 360° e integraciones nativas con marketing y ventas dan a HubSpot ventajas claras para fidelización y análisis del ciclo de vida.</p></div>
     <div class="insight-card ic"><h4>Intercom domina el onboarding interactivo</h4><p>Product tours, checklists, tooltips y notificaciones push permiten activar y retener usuarios con una experiencia in-product completa. HubSpot no tiene equivalente nativo.</p></div>
-    <div class="insight-card neutral"><h4>Ambos tienen IA con costos variables</h4><p>HubSpot: US$ 0,50/conv extra (nuestro plan ya incluye 500 conv/mes con los 50.000 créditos). Intercom cobra US$ 0,99/resolución con Fin AI y US$ 35/usuario/mes por Copilot. Nuestro costo actual HS: US$ 535/mes total.</p></div>
-    <div class="insight-card ic"><h4>Intercom ofrece 45 idiomas y más canales</h4><p>Traducción automática a 45 idiomas y soporte nativo de SMS, WhatsApp y videollamadas. Ideal para clientes o equipos distribuidos globalmente.</p></div>
-    <div class="insight-card neutral"><h4>Costos de implementación vs. costos variables</h4><p>HubSpot requiere cuotas fijas de implementación (US$ 1.500–3.500). Intercom tiene una base más baja pero sus add-ons de IA y canales pueden incrementar la factura.</p></div>
+    <div class="insight-card neutral"><h4>Ambos tienen IA con costos variables</h4><p>HubSpot cobra US$ 0,50/conv extra (nuestro plan incluye 500 conv/mes). Intercom cobra US$ 0,99/resolución con Fin AI, y el asistente para agentes (Copilot) tiene un costo adicional de US$ 35/usuario/mes — no incluido en ningún plan base.</p></div>
+    <div class="insight-card ic"><h4>Intercom destaca en canales e idiomas</h4><p>Ofrece traducción automática a 45 idiomas, SMS nativo, videollamadas y push notifications. HubSpot no tiene traducción automática ni SMS nativo. Ventaja clara para equipos o clientes globales.</p></div>
+    <div class="insight-card neutral"><h4>Costos de implementación vs. costos variables</h4><p>HubSpot Starter y Professional no tienen cuota de implementación. Enterprise requiere US$ 3.500 (único pago). Intercom no tiene cuota inicial pero sus add-ons (Fin AI, Copilot, Proactive Support) pueden incrementar significativamente la factura mensual.</p></div>
     <div class="insight-card neutral"><h4>Ninguna ofrece wiki interna nativa</h4><p>Ambas plataformas orientan su KB al cliente final. Para documentación interna se recomienda Notion u otra herramienta complementaria.</p></div>
   </div>
 </div>
@@ -325,7 +487,7 @@ footer {
     <div class="proposal-card">
       <div class="prop-tag hs">Solo HubSpot</div>
       <h4>HubSpot Service Hub</h4>
-      <p>Usar Service Hub para centralizar toda la operación de Customer con funnels por etapa: Onboarding y sus fases, clientes activos, retención y soporte. Permite trazabilidad completa de etapas, tiempos, SLAs y gestión CRM en una sola plataforma.</p>
+      <p>Centralizar toda la operación en HubSpot: funnels de Onboarding, Clientes Activos, Retención y Soporte con etapas, tiempos y SLAs. Chat omnicanal, encuestas NPS/CSAT/CES y health scores en una sola plataforma integrada al CRM.</p>
       <ul class="benefit-list">
         <li>Funnels de Onboarding, CS y Retención con etapas y SLA</li>
         <li>Trazabilidad completa del ciclo de vida del cliente</li>
@@ -337,7 +499,7 @@ footer {
     <div class="proposal-card">
       <div class="prop-tag ic">Solo Intercom</div>
       <h4>Intercom + Proactive Support</h4>
-      <p>Enfoque en experiencia conversacional multicanal con Fin AI y Copilot según necesidad. Ideal para SaaS que priorizan onboarding rápido y soporte en múltiples idiomas.</p>
+      <p>Usar Intercom como canal de activación in-product: product tours, checklists, tooltips y mensajes push para guiar a nuevos usuarios. Ideal si el foco está en el onboarding interactivo y la comunicación en tiempo real, con soporte en múltiples idiomas.</p>
       <ul class="benefit-list">
         <li>Experiencia de usuario rica</li>
         <li>Product tours y checklists nativas</li>
